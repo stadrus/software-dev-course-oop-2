@@ -80,7 +80,19 @@ public class LemonadeStand {
         }
     }
 
+    public boolean sellLemonade(int lemons, int sugar, int ice) {
+        Lemonade lemonade = new Lemonade(lemons, sugar, ice);
+        if (tryMakingLemonade(lemonade) != null) {
+            money += calculateSale(lemonade);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     private double calculateSale(Lemonade lemonade) {
         return (lemonade.getSugar() * pricePerSugar) + (lemonade.getIce() * pricePerIce) + (lemonade.getLemons() * pricePerLemon);
     }
+
+
 }

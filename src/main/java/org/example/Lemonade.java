@@ -1,5 +1,7 @@
 package org.example;
 
+import static java.awt.AWTEventMulticaster.add;
+
 public class Lemonade {
     // Static field examples
     public static int defaultSugar = 2;
@@ -51,4 +53,10 @@ public class Lemonade {
     //
     // HINT: You can get the counts from the two Lemonade objects using their get methods, e.g.:
     // int newLemonadeLemons = lemonade1.getLemons() + lemonade2.getLemons();
+
+    public static Lemonade mix(Lemonade lemonade1, Lemonade lemonade2){
+//        Lemonade lemonade1 = new Lemonade();
+//        Lemonade lemonade2 = new Lemonade();
+        return Lemonade.mix(lemonade1, lemonade2);
+    }
 }
